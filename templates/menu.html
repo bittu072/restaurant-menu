@@ -1,7 +1,7 @@
 <html>
 
     <head>
-        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/styles.css') }}" />
     </head>
 
 
@@ -10,16 +10,22 @@
         <h1>{{restaurant.name}}</h1>
 
         <!--MESSAGE FLASHING EXAMPLE -->
-        {% with messages = get_flashed_messages() %} {% if messages %}
+        <div class="task-done">
+            {% with messages = get_flashed_messages() %} {% if messages %}
 
-        <ul>
-            {% for message in messages %}
-            <li><strong>{{message}}</strong></li>
-            {% endfor %}
-        </ul>
-        {% endif %} {% endwith %}
+            <ul>
+                {% for message in messages %}
+                <li><strong>{{message}}</strong></li>
+                {% endfor %}
+            </ul>
+            {% endif %} {% endwith %}
+        </div>
         <br>
-        <a href="{{url_for('newMenuItem', restaurant_id=restaurant.id)}}">create new menu item</a>{% for i in items %}
+        <div class="spec">
+            <a href="{{url_for('newMenuItem', restaurant_id=restaurant.id)}}">
+                    create new menu item
+                </a>
+        </div>{% for i in items %}
         <div>
             <p>
                 <b>{{i.name}}</b>

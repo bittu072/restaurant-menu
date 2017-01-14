@@ -1,0 +1,58 @@
+body {
+    font-family: sans-serif;
+    background-color: #fff;
+    text-align: center;
+}
+.title-name {
+    font-size: 30px;
+}
+
+.title-space {
+    color: #5f7892;
+    background-color: #3C3E40;
+}
+
+h1, h2, h3, h4, footer {
+    color: #5f7892;
+}
+
+h1, h2 {
+    font-family: 'Georgia', serif; margin: 0;
+}
+
+h1 {
+    border-bottom: 2px solid #eee;
+}
+
+h2 {
+    font-size: 1.2em;
+}
+
+
+a {
+    text-decoration: none; color:#83A5C7; font-size: .75em;
+}
+
+a:hover {
+    color: black;
+}
+
+h3::first-letter {
+    font-size: 150%;
+}
+
+.header {
+    left:50%; text-align: center;
+}
+
+.flash {
+    background: #cee5F5;
+}
+
+.task-done {
+    color:green;
+}
+
+.spec {
+    font-size: 30px;
+}
